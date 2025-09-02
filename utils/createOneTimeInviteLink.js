@@ -11,7 +11,7 @@ const createOneTimeInviteLink = async () => {
       {
         chat_id: process.env.CHAT_ID,
         member_limit: 1, // faqat 1 kishi ishlata oladi
-        expire_date: Math.floor(Date.now() / 1000) + 3600, // 1 soat amal qiladi
+        // expire_date bermadik, avtomatik faqat 1 kishi uchun ishlaydi
       },
       { headers: { "Content-Type": "application/json" } }
     );
