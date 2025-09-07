@@ -10,9 +10,7 @@ const createOneTimeInviteLink = async () => {
       `https://api.telegram.org/bot${process.env.BOT_TOKEN}/createChatInviteLink`,
       {
         chat_id: process.env.CHAT_ID,
-        member_limit: 1, // 1 marta ishlaydi, keyin avtomatik eskiradi
-        // expire_date bermaymiz – vaqt muammosini yo‘qotadi
-        // creates_join_request bermadik – to‘g‘ridan-to‘g‘ri qo‘shiladi
+        member_limit: 1,
       },
       { headers: { "Content-Type": "application/json" } }
     );
